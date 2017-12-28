@@ -1,0 +1,15 @@
+@import 'vendors/reset.scss';
+@import 'variables/colors.scss';
+
+#app {
+    background: linear-gradient($vue-green, $vue-blue);
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 30pt;
+    }
+}
