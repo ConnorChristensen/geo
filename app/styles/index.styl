@@ -1,83 +1,72 @@
-@import 'vendors/reset.scss';
-@import 'variables/colors.scss';
-@import 'variables/fonts.scss';
-@import 'variables/breakpoints.scss';
-@import 'variables/mixins.scss';
+@import 'vendors/reset'
+@import 'variables/colors'
+@import 'variables/fonts'
+@import 'variables/breakpoints'
+@import 'variables/mixins'
 
-html {
-    font-family: $font;
-}
+html
+    font-family font
+
+navBarHeight = 50px
+#topBar
+    flex(center, space-between)
+    background black
+    height navBarHeight
+    img
+        width (navBarHeight/.5)
+    div
+        display flex
+        align-items stretch
+        height 100%
+        a
+            text-decoration none
+            background blue
+            padding 0 30px
+            line-height 50px
+            color white
+            &:hover
+                background lighten(blue, 15%)
+
+h2
+    font-size 25pt
+    text-align center
+    padding 15px 0 0 0
+
+p
+    padding 20px
+    line-height 1.2
 
 
-$navBarHeight: 50px;
-#topBar {
-    @include flex(center, space-between);
-    background: $black;
-    height: $navBarHeight;
-    img {
-        width: $navBarHeight / .5;
-    }
-    div {
-        display: flex;
-        align-items: stretch;
-        height: 100%;
-        a {
-            text-decoration: none;
-            background: $blue;
-            padding: 0 30px;
-            line-height: 50px;
-            color: white;
-            &:hover {
-                background: lighten($blue, 15%);
-            }
-        }
-    }
-}
+.imageSection
+    background black
+    width 100vw
+    height 70vh
+    min-height 600px
+    color white
+    background-size cover
+    animation fadein .5s
+    flex(center, center)
+    div
+        width 100vw
+        max-width 700px
+        color white
+        font-weight 100
+        background rgba(0, 0, 0, 0.47)
+        transition 0s
 
-h2 {
-    font-size: 25pt;
-    text-align: center;
-    padding: 15px 0 0 0;
-}
-p {
-    padding: 20px;
-    line-height: 1.2;
-}
 
-.imageSection {
-    background: black;
-    width: 100vw;
-    height: 70vh;
-    min-height: 600px;
-    color: white;
-    background-size: cover;
-    animation: fadein .5s;
-    @include flex(center, center);
-    div {
-        width: 100vw;
-        max-width: 700px;
-        color: white;
-        font-weight: 100;
-        background: rgba(0, 0, 0, 0.47);
-        transition: 0s;
 
-    }
-}
 
-#banner {
-    background: url(Images/summer_snow.jpg) no-repeat center center;
-}
+#banner
+    background url(Images/summer_snow.jpg) no-repeat center center
 
-#badges {
-    background: url(Images/mt_hood.jpg) no-repeat center center;
-}
+#badges
+    background url(Images/mt_hood.jpg) no-repeat center center
 
-#about {
-    background: $blue;
-    color: white;
-    padding: 30px 0;
-    p {
-        max-width: 800px;
-        margin: auto;
-    }
-}
+#about
+    background blue
+    color white
+    padding 30px 0
+    p
+        max-width 800px
+        margin auto

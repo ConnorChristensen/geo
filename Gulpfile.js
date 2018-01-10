@@ -25,9 +25,9 @@ var anyFile     = "**/*";
 var not         = "!";
 var paths = {
     start: {
-        html: root + config.folders.html + "/" + anyFile + ".html",
-        scss: root + config.folders.scss + "/*.scss",
-        js:   root + config.folders.js   + "/" + anyFile + ".js"
+        html:   root + config.folders.html   + "/" + anyFile + ".html",
+        preCSS: root + config.folders.preCSS + "/*.styl",
+        js:     root + config.folders.js     + "/" + anyFile + ".js"
    }
 }
 
@@ -45,11 +45,12 @@ gulp.task('html', function() {
 /////////
 // CSS //
 /////////
-// compile our scss files and send them straight to dist
+// compile our stylus files and send them straight to dist
 gulp.task('css', function() {
-   return gulp.src(paths.start.scss)    //get our scss files
-      .pipe(plugin.sass())              //compile them
-      .pipe(gulp.dest(destination));    //put them in a temp folder
+   return gulp.src(paths.start.preCSS)  //get our stylus files
+      .pipe(plugin.print())
+      .pipe(plugin.stylus())            //compile them
+      .pipe(gulp.dest(destination));    //put them in our destination folder
 });
 
 
@@ -89,22 +90,12 @@ gulp.task('reload', function() {
         .pipe(plugin.connect.reload());
 });
 
-// gulp.task('css-reload', function() {
-//     return gulp.src(destination + "*.css")
-//         .pipe(plugin.connect.reload());
-// });
-//
-// gulp.task('js-reload', function() {
-//     return gulp.src(destination + "*.js")
-//         .pipe(plugin.connect.reload());
-// });
-
 
 ///////////
 // Watch //
 ///////////
 gulp.task('watch', function() {
-   gulp.watch(root + 'styles/**/*.scss', gulp.series('css', 'reload'));
+   gulp.watch(root + 'styles/**/*.styl', gulp.series('css', 'reload'));
    gulp.watch(root + '**/*.html',        gulp.series('html', 'wire-port-local', 'reload'));
    gulp.watch(root + '**/*.js',          gulp.series('js', 'wire-port-local', 'reload'));
 });

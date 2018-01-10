@@ -2,11 +2,11 @@
    "root": "app",
    "end":  "dist",
    "homePage": "index.html",
-   
+
    "folders": {
       "html": "views",
       "css":  "styles",
-      "scss": "styles",
+      "preCSS": "styles",
       "js":   "scripts"
    },
    "localhost": {
