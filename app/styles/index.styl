@@ -9,8 +9,8 @@ html
 
 navBarHeight = 50px
 #topBar
-    flex(center, space-between)
-    background black
+    Flex(center, space-between)
+    background Black
     height navBarHeight
     img
         width (navBarHeight/.5)
@@ -20,12 +20,10 @@ navBarHeight = 50px
         height 100%
         a
             text-decoration none
-            background blue
             padding 0 30px
             line-height 50px
             color white
-            &:hover
-                background lighten(blue, 15%)
+            BackgroundColorTransition(0.5s, Blue, lighten(Blue, 15%))
 
 h2
     font-size 25pt
@@ -38,23 +36,20 @@ p
 
 
 .imageSection
-    background black
+    background Black
     width 100vw
     height 70vh
     min-height 600px
     color white
     background-size cover
     animation fadein .5s
-    flex(center, center)
-    div
+    Flex(center, center)
+    &>div
         width 100vw
         max-width 700px
-        color white
         font-weight 100
         background rgba(0, 0, 0, 0.47)
-        transition 0s
-
-
+        padding 15px
 
 
 #banner
@@ -69,7 +64,7 @@ p
             height 200px
 
 #about
-    background blue
+    background Blue
     color white
     padding 30px 0
     p

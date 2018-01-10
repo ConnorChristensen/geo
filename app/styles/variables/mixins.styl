@@ -1,5 +1,14 @@
-flex(vertical, horizontal) {
-    display: flex;
-    align-items: vertical;
-    justify-content: horizontal;
+Flex(vertical, horizontal) {
+    display flex
+    align-items vertical
+    justify-content horizontal
+}
+
+BackgroundColorTransition(time, startColor, endColor) {
+    background startColor
+    transition background time ease
+    &:hover {
+        background endColor
+        transition background time ease
+    }
 }
