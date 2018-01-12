@@ -7,3 +7,42 @@
 
 html
     font-family SansSerif
+
+#app
+    background Black
+    width 100vw
+    height calc(100vh - 50px)
+    color white
+    background-size cover
+    animation fadein .5s
+    Flex(center, center)
+    background url(images/half_dome.jpg) no-repeat center center fixed
+    &>div
+        background Black
+        padding 20px
+        width 100vw
+        max-width 500px
+        Flex(center, center)
+        flex-direction column
+        h2
+            font-size 25pt
+        div
+            margin 20px
+            text-align center
+        input, button
+            border none
+            outline none
+        input
+            width 250px
+            height 30px
+            border-radius 3px
+            padding 5px
+            font-size 11pt
+        button
+            width 200px
+            padding 8px 0
+            border-radius 10px
+            color white
+            background Blue
+            font-size 15pt
+            cursor pointer

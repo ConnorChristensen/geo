@@ -11,9 +11,25 @@
     <div id="topBar">
         <img src="images/Logo_Name_Combo_White.png" alt="">
         <div>
+            <a href="index.html">Home</a>
             <a href="login.html">Register</a>
-            <a href="">Home</a>
+        </div>
+    </div>
+    <div id="app">
+        <div>
+            <h2>Login</h2>
+            <div>
+                <input type="text" v-model.lazy="username" id="username" placeholder="username">
+                <p>{{ feedback.username }}</p>
+            </div>
+            <div>
+                <input type="text" v-model="password" id="password" placeholder="password">
+                <p>{{ feedback.password }}</p>
+            </div>
+            <button>Submit</button>
         </div>
     </div>
 </body>
+<script src="vue.min.js"></script>
+<script src="login.js"></script>
 </html>
