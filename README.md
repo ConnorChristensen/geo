@@ -1,5 +1,5 @@
-# website-seed
-A template organizational structure for building websites
+# Geo
+The client side code for the geo web app
 
 
 ## Installation Instructions
